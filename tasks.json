@@ -1,0 +1,30 @@
+{
+  "2": {
+    "id": 2,
+    "description": "nahh im going for some chicken in kfc",
+    "status": "done",
+    "createdAt": "28.10.2025 00:52:31",
+    "updatedAt": "28.10.2025 01:49:59"
+  },
+  "3": {
+    "id": 3,
+    "description": "nahh",
+    "status": "done",
+    "createdAt": "28.10.2025 01:11:43",
+    "updatedAt": "28.10.2025 01:12:11"
+  },
+  "4": {
+    "id": 4,
+    "description": "a",
+    "status": "done",
+    "createdAt": "28.10.2025 01:19:47",
+    "updatedAt": "28.10.2025 01:26:12"
+  },
+  "5": {
+    "id": 5,
+    "description": "make a sandwich",
+    "status": "todo",
+    "createdAt": "28.10.2025 01:37:32",
+    "updatedAt": null
+  }
+}
