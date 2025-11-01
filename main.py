@@ -3,6 +3,7 @@ from datetime import datetime
 import json
 import os
 import re
+import sys
 
 
 class TaskStatus(Enum):
@@ -150,9 +151,9 @@ class TaskList:
         if not os.path.exists(self.file_path):
             with open("tasks.json", 'w') as f:
                 json.dump({}, f, indent=2, ensure_ascii=False)
-    
 
-if __name__ == '__main__':
+
+def _help():
     help_text = "Commands:\n" \
     "task-cli add ['description'] (description is description)\n" \
     "task-cli update [id] ['description'] (id is a task id)\n" \
@@ -165,13 +166,17 @@ if __name__ == '__main__':
     "task-cli list todo\n"
     print(help_text)
 
+
+if __name__ == '__main__':
     tl = TaskList("./tasks.json")
 
     try:
         while True:
             cmd = input("Choose one of the listed commands: ")
             # Using mostly regular expression for user inputs
-            if re.match(r"task-cli add '\b[A-Za-z\d\s]+\b'", cmd):
+            if "help" == sys.argv[0]:
+                _help()
+            elif re.match(r"task-cli add '\b[A-Za-z\d\s]+\b'", cmd):
                 tl.add(cmd.split("'")[-2])
             elif re.match(r"task-cli update \d+ '\b[A-Za-z\d\s]+\b'", cmd):
                 tl.update(cmd.split()[2], cmd.split("'")[-2])
