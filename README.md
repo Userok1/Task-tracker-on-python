@@ -9,7 +9,7 @@ You have list of commands:
 * task-cli update [id] ['description'] (this command selects task from task list by its id and updates it 'description')
 * task-cli delete [id] (this command deletes a task by its id from the list)
 * task-cli mark-in-progress [id] (this command sets a task's status as _in-progress_)
-* task-cli mark-done [id] (this command sets a task's status as _done_)
+* task-cli mark-done [id] (this command sets a task's status as ***done***)
 * task-cli list
 * task-cli list done
 * task-cli list in-progress
